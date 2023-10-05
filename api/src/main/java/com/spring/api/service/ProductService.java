@@ -30,7 +30,7 @@ public class ProductService {
         if (existingProduct.isPresent()) {
             Product product = existingProduct.get();
             product.setName(updateProduct.getName());
-            product.setValue(updateProduct.getValue());
+            product.setPrice(updateProduct.getPrice());
             return productRepository.save(product);
         } else {
             return null;
