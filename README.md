@@ -25,7 +25,7 @@ Irá retornar true ou false, pra verificar se o CPF existe.
 ### Descrição:
 Irá cadastrar uma nova categoria de produtos.
 
-## /product
+## api/v1/product
 ### Tipo: POST
 ### Parâmetros: 
 - name (string)
@@ -36,7 +36,7 @@ Irá cadastrar uma nova categoria de produtos.
 ### Descrição:
 Irá cadastrar um novo produto
 
-## /product
+## api/v1/product
 ### Tipo: GET
 ### Parâmetros: 
 - id (id)
@@ -44,7 +44,7 @@ Irá cadastrar um novo produto
 ### Descrição:
 Irá retornar um produto específico
 
-## /customer
+## api/v1/customer
 ### Tipo: POST
 ### Parâmetros:
 - name (string)
