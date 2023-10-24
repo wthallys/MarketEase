@@ -7,44 +7,117 @@
     <link rel="stylesheet" href="sistema.css">
 </head>
 <body>
+    <header class="header">
+<h1>CAIXA ABERTO</h1>
+
+    </header>
     <div class="container">
         <h1>Tela de Pedidos</h1>
-        <div class="grid">
-            <div class="form-group">
-                <label for="productName">Nome do Produto</label>
-                <input type="text" id="productName">
+        <div class="leftSide">
+            <div class="grid">
+                <div class="form-group">
+                    <label for="productCode">Código do Produto</label>
+                    <input type="number" id="productCode">
+                </div>
+                <div class="form-group">
+                    <label for="productName">Nome do Produto</label>
+                    <input type="text" id="productName">
+                </div>
+                <div class="form-group">
+                    <label for="productPrice">Preço do Produto (R$)</label>
+                    <input type="number" id="productPrice">
+                </div>
+                <div class="form-group">
+                    <label for="quantity">Quantidade</label>
+                    <input type="number" id="quantity">
+                </div>
+                <div class="payment">
+                    <label for="paymentMethod">Forma de Pagamento</label>
+                    <select id="paymentMethod">
+                        <option value="dinheiro">Dinheiro</option>
+                        <option value="cartao">Cartão de Crédito</option>
+                        <option value="boleto">Pix</option>
+                        <option value="fiado">Fiado</option>
+                    </select>
+                </div>
+                <!--<div class="form-group">
+                    <label for="totalAmount">Valor Total (R$)</label>
+                    <input type="number" id="totalAmount" readonly>
+                </div>-->
+                <div class="button-container">
+                    <button onclick= "window.location.href = 'fiado.html'">Adicionar produto</button>
+                </div>
             </div>
-            <div class="form-group">
-                <label for="productCode">Código do Produto</label>
-                <input type="text" id="productCode">
+            <div class="rightSide">
+                <table>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome do Produto</th>
+                        <th>Preço</th>
+                        <th>Estoque</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Produto 1</td>
+                        <td>$10.00</td>
+                        <td>100 unidades</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Produto 2</td>
+                        <td>$20.00</td>
+                        <td>50 unidades</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Produto 3</td>
+                        <td>$15.00</td>
+                        <td>75 unidades</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Produto 3</td>
+                        <td>$15.00</td>
+                        <td>75 unidades</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Produto 3</td>
+                        <td>$15.00</td>
+                        <td>75 unidades</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Produto 3</td>
+                        <td>$15.00</td>
+                        <td>75 unidades</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Produto 3</td>
+                        <td>$15.00</td>
+                        <td>75 unidades</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Produto 3</td>
+                        <td>$15.00</td>
+                        <td>75 unidades</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Produto 3</td>
+                        <td>$15.00</td>
+                        <td>75 unidades</td>
+                    </tr>
+                    <!-- Adicione mais linhas conforme necessário -->
+                </table>
+                <div class="button-container">
+                    <button onclick= "window.location.href = 'fiado.html'">Salvar</button>
+                </div>
             </div>
-            <div class="form-group">
-                <label for="productPrice">Preço do Produto (R$)</label>
-                <input type="number" id="productPrice">
-            </div>
-            <div class="form-group">
-                <label for="quantity">Quantidade</label>
-                <input type="number" id="quantity">
-            </div>
-            <div class="form-group">
-                <label for="paymentMethod">Forma de Pagamento</label>
-                <select id="paymentMethod">
-                    <option value="dinheiro">Dinheiro</option>
-                    <option value="cartao">Cartão de Crédito</option>
-                    <option value="boleto">Pix</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="totalAmount">Valor Total (R$)</label>
-                <input type="number" id="totalAmount" readonly>
-            </div>
-        </div>
-        <div class="button-container">
-            <button id="generateReport">Pagar</button>
-            <button onclick= "window.location.href = 'fiado.html'">Cadastrar Fiado</button>
         </div>
     </div>
-
     <script src="sistema.js"></script> 
 </body>
 </html>

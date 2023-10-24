@@ -3,6 +3,37 @@ body {
     background-color: black;
 }
 
+.leftSide {
+    display: flex;
+}
+
+.header {
+    background-color: rgb(83, 0, 109);
+    color: white;
+    text-align: center;
+    padding: 5px;
+}
+
+
+.rightSide {
+    margin-left: 50px;
+    color:#fff;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 25px;
+}
+
+table, th, td {
+    border: 1px solid white;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+}
 .container {
     width: 80%;
     margin: 0 auto;
@@ -13,11 +44,22 @@ body {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
+    color: #fff;
 }
 
 .form-group {
     margin-bottom: 20px;
     color: white;
+    display: block;
+    padding: 5px;
+}
+
+.payment {
+    width: 100%;
+    padding: 10px;
+    height: 10px;
+    width: 100%;
+    display: block;
 }
 
 label {
@@ -30,10 +72,13 @@ input[type="number"],
 select {
     width: 100%;
     padding: 10px;
+    height: 50px;
 }
 
 .button-container {
     text-align: center;
+    display: block;
+    margin-top: 42px;
 }
 
 button {
@@ -42,4 +87,5 @@ button {
     padding: 10px 20px;
     border: none;
     cursor: pointer;
+    
 }
