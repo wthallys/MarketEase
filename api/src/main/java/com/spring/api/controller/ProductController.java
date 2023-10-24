@@ -1,6 +1,8 @@
 package com.spring.api.controller;
 
+import com.spring.api.model.Category;
 import com.spring.api.model.Product;
+import com.spring.api.model.ProductRequestDTO;
 import com.spring.api.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -29,8 +31,8 @@ public class ProductController {
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public Product createProduct(@RequestBody Product product) {
-        return productService.createProduct(product);
+    public Product createProduct(@RequestBody ProductRequestDTO productRequestDTO) {
+        return productService.saveProductWithCategory(productRequestDTO.getProduct(), productRequestDTO.getCategory());
     }
 
     @PutMapping("/{id}")
