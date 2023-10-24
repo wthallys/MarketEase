@@ -53,3 +53,21 @@ Irá retornar um produto específico
 
 ### Descrição
 Irá cadastrar um novo cliente.
+
+## /customer
+### Tipo: GET
+### Parâmetros:
+- name (string)
+
+### Descrição
+Irá buscar o cliente e retornará o extrato dele.
+
+## /sale
+### Tipo: POST
+### Parâmetros
+
+- employeeId (id)
+- customerId (id)
+- price (number)
+- type (string)
+- products (array): [productId (id), quantity (number)]
