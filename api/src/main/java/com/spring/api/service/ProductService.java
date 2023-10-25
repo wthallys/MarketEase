@@ -1,6 +1,8 @@
 package com.spring.api.service;
 
+import com.spring.api.model.Category;
 import com.spring.api.model.Product;
+import com.spring.api.repository.CategoryRepository;
 import com.spring.api.repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -12,6 +14,8 @@ import java.util.Optional;
 public class ProductService {
     @Autowired
     ProductRepository productRepository;
+    @Autowired
+    CategoryRepository categoryRepository;
 
     public List<Product> getAllProducts() {
         return productRepository.findAll();
@@ -21,7 +25,10 @@ public class ProductService {
         return productRepository.findById(id).orElse(null);
     }
 
-    public Product createProduct(Product product) {
+    public Product saveProductWithCategory(Product product, Category category) {
+        categoryRepository.save(category);
+        product.setCategory(category);
+
         return productRepository.save(product);
     }
 
