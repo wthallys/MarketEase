@@ -1,6 +1,5 @@
 package com.spring.api.controller;
 
-import com.spring.api.model.Category;
 import com.spring.api.model.Product;
 import com.spring.api.model.ProductRequestDTO;
 import com.spring.api.service.ProductService;

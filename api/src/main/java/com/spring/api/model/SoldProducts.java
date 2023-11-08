@@ -1,17 +1,21 @@
 package com.spring.api.model;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
 @Data
-@AllArgsConstructor
 @NoArgsConstructor
-public class Category {
+public class SoldProducts {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String name;
+    @ManyToOne
+    @JoinColumn(name = "productId")
+    private Product product;
+    @ManyToOne
+    @JoinColumn(name = "saleId")
+    private Sale sale;
+    private Integer quantity;
 }
